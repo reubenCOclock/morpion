@@ -2,15 +2,21 @@
 require_relative './game.rb'
 require_relative './player.rb'
 require_relative './board.rb'
+require_relative './show.rb'
+
 
 class App
 def playGame
 
     newGame=Game.new(Player.new("player1"),Player.new("player2"))
     
-    board=Board.new
+    board=Board.new 
+
+   
     getBoard=board.buildBoard(3,3)
-    drawBoard=board.showBoard 
+
+    showBoard=Show.new
+    drawBoard=showBoard.showBoard(getBoard)
     
     
     checkIfValuesFull=board.checkIfValuesFull
@@ -38,7 +44,7 @@ def playGame
     
     
     if checkIfCombo[:winner]=="player2"
-        puts "player 1 wins"
+        puts "player 2 wins"
     end 
     
     puts "would you like to play again"
