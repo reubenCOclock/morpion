@@ -12,7 +12,7 @@ def playGame
     
     board=Board.new 
 
-   
+    puts "TEST GITHUB ADDD"
     getBoard=board.buildBoard(3,3)
 
     showBoard=Show.new
