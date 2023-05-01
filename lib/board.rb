@@ -10,7 +10,9 @@ class Board
             counter=0
             rows.times do |j|
                 counter+=1
-                gameRows.push({"position": letters[i]+counter.to_s,"value": "nil","player": "nil"})     
+                gameRows.push({"position": letters[i]+counter.to_s,"value": "nil","player": "nil"})    
+                puts "get J" 
+                puts j
             end 
             @board.push(gameRows)
         end 
