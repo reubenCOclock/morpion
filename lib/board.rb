@@ -13,6 +13,7 @@ class Board
                 gameRows.push({"position": letters[i]+counter.to_s,"value": "nil","player": "nil"})    
                 puts "get J" 
                 puts j
+                puts "Je suis invité maintenant!"
             end 
             @board.push(gameRows)
         end 
